@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="style.css">
+  <title>Column Chart</title>
+</head>
+<body>
+  <canvas id="myCanvas"></canvas>
+</body>
+
+<script type="module">
+  import { createColumnChart } from './column_chart.mjs';
+
+  const obj = {
+    x_axis_label: 400,
+    y_axis_label: 300,
+    categories: ['option1', 'option2', 'option3', 'option4'],
+    data: [{value: 50, color: '#11698e'}, {value: 120, color: '#312c51'},{value: 80, color: '#184d47'},{value: 65, color: '#a20a0a'}],
+    color: '#008080'
+  };
+
+  const myCanvas = document.getElementById("myCanvas");
+  createColumnChart(myCanvas, obj);
+</script>
+</html>
